@@ -1,4 +1,4 @@
-package Controller;
+package controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,20 +10,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.spotDAO;
-import vo.spotVO;
-
-/**
- * Servlet implementation class HomeController
- */
-@WebServlet("/spot.do")
-public class spotController extends HttpServlet {
+@WebServlet("/audioGuide.do")
+public class AudioGuideController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public spotController() {
+    public AudioGuideController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -40,15 +34,44 @@ public class spotController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		   request.setCharacterEncoding("utf-8");
+		      /*
+		      ArrayList<EmployeeVO> employeeList = new ArrayList<EmployeeVO>();
 		      
-		      ArrayList<spotVO> spotList = new ArrayList<spotVO>();
+		      EmployeeDAO dao = new EmployeeDAO();
+		      employeeList = dao.selectEmployeeList();
 		      
-		      spotDAO dao = new spotDAO();
-		      spotList = dao.getspotList();
-		      
-		      request.setAttribute("spotList", spotList);
+		      request.setAttribute("employeeList", employeeList);
 
-		      RequestDispatcher rd1 = request.getRequestDispatcher("spot.jsp");
+		      RequestDispatcher rd1 = request.getRequestDispatcher("index.jsp");
 		      rd1.forward(request, response);
+		      */
+	}
+	
+	public void reqFileToDAO() {
+		
+	}
+	
+	public void reqScript() {
+		
+	}
+	
+	public void reqGps() {
+		
+	}
+	
+	public void searchSpot() {
+		
+	}
+	
+	public void checkPlay() {
+		
+	}
+	
+	public void reqSaveToDevice() {
+		
+	}
+	
+	public void reqFileToDevice() {
+		
 	}
 }
