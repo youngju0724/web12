@@ -20,17 +20,19 @@ public class spotDAO {
 		ResultSet rs = null;
 		
 		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
-			String user = "madang";
-			String password = "madang";
+			//Class.forName("oracle.jdbc.driver.OracleDriver");
+			Class.forName("com.mysql.jdbc.Driver");
+			//String url = "jdbc:oracle:thin:@localhost:1521:xe";
+			String url = "jdbc:mysql://db12.ctrmjrtgka38.ap-northeast-2.rds.amazonaws.com:3306/db12";
+			String user = "youngju";
+			String password = "201202163";
 
 			con = DriverManager.getConnection(url, user, password);
 
 			StringBuilder sql = new StringBuilder();
 			
-			sql.append(" SELECT col ");
-			sql.append(" FROM TABLE1");
+			sql.append(" SELECT spot_name ");
+			sql.append(" FROM spot_List ");
 
 			pstmt = con.prepareStatement(sql.toString());
 
@@ -39,7 +41,7 @@ public class spotDAO {
 			
 			while(rs.next()){
 				spotVO spot = new spotVO();
-				spot.setCol(rs.getString("col"));
+				spot.setidspot(rs.getString("spot_name"));
 			
 				spotList.add(spot);
 			}

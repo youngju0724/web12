@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<%=spotList.get(0).getCol()%>
+<%=spotList.get(0).getidspot()%>
 
 </body>
 </html>

@@ -1,13 +1,13 @@
 package vo;
 
 public class spotVO {
-	private String Col;
+	private String idspot;
 
-	public String getCol() {
-		return Col;
+	public String getidspot() {
+		return idspot;
 	}
 
-	public void setCol(String col) {
-		Col = col;
+	public void setidspot(String id) {
+		idspot = id;
 	}
 }
